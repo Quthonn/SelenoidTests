@@ -7,6 +7,7 @@ public class SelenoidTests {
     void checkTotal() {
         get("https://selenoid.autotests.cloud/status")
                 .then()
+                .statusCode(200)
                 .body("total", is(5));
     }
 }
